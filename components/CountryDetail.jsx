@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './CountryDetail.css'
 import { Link, useLocation, useParams } from 'react-router-dom'
-import { useWindowSize } from '../hooks/useWindowSize'
 import { useTheme } from '../hooks/useTheme'
 import CountryDetailShimmer from './CountryDetailShimmer'
 
@@ -19,7 +18,7 @@ export default function CountryDetail() {
   const [notFound, setNotFound] = useState(false)    
   const [isDark] = useTheme()
 
-  const windowSize = useWindowSize()          
+            
 
 
   function updateCountryData(data){
@@ -75,7 +74,7 @@ export default function CountryDetail() {
   return  (
     <main className={`${isDark ? 'dark' : ''}`}>
 
-      <h1 style={{textAlign: 'center'}}>{windowSize.width} X {windowSize.height}</h1>
+      
 
       <div className="country-details-container">
         <span className="back-button" onClick={() => history.back()}>
