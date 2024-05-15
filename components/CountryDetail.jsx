@@ -63,6 +63,8 @@ export default function CountryDetail() {
     .then(([data]) => {
       
       updateCountryData(data)     
+      
+    }).catch(err => {
       setNotFound(true)
     })
   }, [countryName])
