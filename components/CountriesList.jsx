@@ -9,7 +9,7 @@ export default function CountriesList({query}) {
   const [count, setCount] = useState(0)         
 
   useEffect(() => {
-    fetch('https://restcountries.com/v3.1/all')
+    fetch('https://restcountries.com/v3.1/all?fields=name,capital,currencies,flags,population,region,languages,subregion,borders,tld')
       .then((res) => res.json())
       .then((data) => {
         setCountriesData(data)
